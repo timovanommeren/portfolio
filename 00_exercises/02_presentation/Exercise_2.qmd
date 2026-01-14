@@ -1,0 +1,100 @@
+---
+title: "Exercise 2"
+author:
+  - name: "T. Q. van Ommeren"
+    orcid: "0009-0001-5785-9268"
+format:
+  revealjs:
+    logo: Exercise_2_files/logo_dealing_with_drugs.jpg
+    center: true        
+    slide-number: true
+    transition: fade
+    autoPlayMedia: true 
+editor: visual
+bibliography: Exercise_2_files/MDMA_legal.bib
+---
+
+```{r}
+#| echo: false
+#renv::init()
+```
+
+## Estimated revenue
+
+```{r}
+#| echo: false
+#| fig-align: center
+knitr::include_graphics("Exercise_2_files/revenue_boxplot.png")
+```
+
+## Use Frequencies MDMA
+
+```{r}
+#| echo: false
+library(DT)
+library(readr)
+Party_Panel <- read_csv("Exercise_2_files/Party_Panel.csv")
+datatable(Party_Panel)
+
+```
+
+## Moving figure
+
+```{r}
+#| echo: false
+knitr::include_graphics("Exercise_2_files/GPT_gif.gif")
+```
+
+## The MDMA regulation debate
+
+::::: columns
+::: column
+**Pros**\
+Protect vulnerable users
+
+Decrease organised crime
+:::
+
+::: column
+**Cons**\
+Increased use in general population
+
+Bad for international reputation
+:::
+:::::
+
+## Equations baby
+
+$$
+\begin{aligned}
+\text{Total state revenue}
+  &= \text{Demand} \cdot \text{MCR} \cdot (P - C) \\
+\text{Demand}
+  &= U \cdot F \cdot I \\
+\text{where}\quad
+U&=\text{number of users},\quad
+F=\text{frequency of use},\quad
+I=\text{intensity of use},\\
+\text{MCR}&=\text{market capture rate},\quad
+P=\text{price},\quad
+C=\text{costs}.
+\end{aligned}
+$$ {#eq-revenue}
+
+## A citation!
+
+See here possibly the most epic reference in the MDMA regulation debate @nutt_equasy_2009
+
+## Some not-run but cached code
+
+```{r}
+#| eval: false
+#| label: a normal distribution and its mean
+#| cache: true
+
+x <- rnorm(100)
+mean(x)
+
+```
+
+## References

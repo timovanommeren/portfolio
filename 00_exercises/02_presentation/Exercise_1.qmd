@@ -1,0 +1,23 @@
+---
+title: "Hi kids, my name is:"
+author:
+  - name: "T. Q. van Ommeren"
+    orcid: "0009-0001-5785-9268"
+format:
+  revealjs:
+    center: true        
+    slide-number: true
+    transition: fade
+editor: visual
+---
+
+## Nos ta bolonan di entropia
+
+$$
+\Delta S_{\text{universe}} \geq 0 \\
+\text{where } \Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}}
+$$
+
+## A baked cake
+
+![](Exercise_1_files/Head_of_a_skeleton_with_a_burning_cigarette.jpg)
