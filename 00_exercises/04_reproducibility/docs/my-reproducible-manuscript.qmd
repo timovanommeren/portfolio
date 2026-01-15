@@ -1,0 +1,68 @@
+---
+title: "My Reproducible Manuscript"
+author: "Timo van Ommeren"
+format: pdf
+bibliography: my-reproducible-manuscript.bib
+---
+
+## Preparation
+
+```{r}
+# Load penguins
+library(ggplot2)
+
+# Read data
+penguins <- read.csv("../data/data.csv")
+
+#import function do_addtion from script
+source("../scripts/do_addition.R")
+```
+
+
+
+## Meet Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. 
+To learn more about Quarto see [https://quarto.org](https://quarto.org).
+
+## Meet the penguins
+
+The penguins data from the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica. 
+
+![LTER penguins illustration by Allison Horst](https://allisonhorst.github.io/palmerpenguins/reference/figures/lter_penguins.png){fig-align="center" width=60%}
+
+## Results
+
+A nice little plot.
+
+```{r}
+# Plot penguins
+ggplot(penguins, 
+       aes(x = `Flipper.Length..mm.`, y = `Culmen.Length..mm.`)) +
+        geom_point(aes(color = Species, shape = Species)) +
+        scale_color_manual(values = c("darkorange","purple","cyan4")) +
+        labs(
+                title = "Flipper and Culmen length",
+                subtitle = "Dimensions for penguins at Palmer Station LTER",
+                x = "Flipper length (mm)", y = "Culmen length (mm)",
+                color = "Penguin species", shape = "Penguin species"
+        ) +
+        theme_minimal()
+```
+
+## In line code
+
+Now we're going to calculate the sum of 25 and 25 using inline code: `r 25 + 25`. Furthermore, we're going to report the number of observations in the penguins dataset for the "Chinstrap and Gentoo species repectively: `r table(penguins$Species)["Chinstrap penguin (Pygoscelis antarctica)"]`,`r table(penguins$Species)["Gentoo penguin (Pygoscelis papua)"]`.
+
+Now for the most important calculation of them all. Flipper length! The average flipper length of all penguins is `r round(mean(penguins$Flipper.Length..mm., na.rm=TRUE),2)`.
+
+
+## Testing the addition function
+
+We can also use the addition function defined in the `do_addition.R` script to add two numbers together. For example, again adding 25 and 25 gives us `r do_addition(25, 25)`. It works!
+
+## References
+
+Here is a citation for the palmerpenguins package [@horst_palmer_2022].
+
+Here's another citation [@chis2025cognition]
