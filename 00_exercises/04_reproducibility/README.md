@@ -1,5 +1,11 @@
-# Markup languages and reproducible programming in statistics
+# my-reproducible manuscript
 
-Deliverables for Markup languages and reproducible programming in statistics (202000010).
+<!-- badges: start -->
+<!-- badges: end -->
 
+The goal of my-reproducible-manuscript is for demonstrating how to create a reproducible manuscript using R Markdown.
+
+## The author and date of creation
+
+This manuscript was created by [Timo van Ommeren] on `r Sys.Date()`.
 
