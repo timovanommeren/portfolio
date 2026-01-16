@@ -52,4 +52,4 @@ rsconnect/
 renv/
 
 # sub github repositories
-/00_exercises/05_portfolio/.github.io/
+/00_exercises/05_portfolio/*
