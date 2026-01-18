@@ -1,5 +1,2 @@
-# Markup languages and reproducible programming in statistics
 
-Deliverables for Markup languages and reproducible programming in statistics (202000010).
-
-
+Please find my fork of the 2020 version of the course repository here: [timovanommeren/portfolio/issues/1](https://github.com/timovanommeren/portfolio/issues/1)
